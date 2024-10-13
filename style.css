@@ -15,7 +15,7 @@ body, html {
     height: 100vh;
 }
 
-.background (
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,15 +24,15 @@ body, html {
     background-size: cover;
     background-position: center;
     z-index: 1;
-)
+}
 
 .star {
     position: absolute;
-    width; 5px;
+    width: 5px;
     height: 5px;
     background: white;
     border-radius: 50%;
-    animation: twinkle 2s infinite:
+    animation: twinkle 2s infinite;
 }
 
 @keyframes twinkle {
