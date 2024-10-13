@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background (
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagepath/tobackground.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+)
+
+.star {
+    position: absolute;
+    width; 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite:
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.animal {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    animation: move 5s linear infinite alternate;
+}
+
+@keyframes move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+}
+
+#character-container {
+    position: absolute;
+    bottom: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+#character {
+    width: 105px;
+    height: auto;
+}
+
+.interaction {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+}
+
+.interaction input {
+    padding: 10px;
+    border: 1px soid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.interaction button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.interaction button:hover {
+    background-color: #0056b3;
+}
