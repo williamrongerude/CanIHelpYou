@@ -13,7 +13,6 @@ body, html {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
 }
 
 .background (
@@ -22,7 +21,6 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('imagepath/tobackground.jpg');
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -67,6 +65,34 @@ body, html {
     height: auto;
 }
 
+
+#character.nod {
+    animation: nod 1s ease-in-out forwards;
+}
+
+@keyframes nod {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(10deg); }
+}
+
+#character.wave {
+    animation: wave 1s ease-in-out forwards;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(-15deg); }
+}
+
+#character.shrug {
+    animation:shrug 0.5s ease-in-out forwards;
+}
+
+@keyframes shrug {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
 .interaction {
     position: absolute;
     bottom: 5%;
@@ -97,4 +123,15 @@ body, html {
 
 .interaction button:hover {
     background-color: #0056b3;
+}
+
+.response-box {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    max-width: 300px;
+    text-align: center;
 }
